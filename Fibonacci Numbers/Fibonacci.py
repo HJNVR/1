@@ -5,7 +5,7 @@ def fib(n):
 
 # Q1: Find the Minimum Number of Fibonacci Numbers Whose Sums is K
 
-## My Attempt : Success
+## My Attempt : Success but slow
 class Solution(object):
     '''
     Input: k = 7
@@ -33,7 +33,7 @@ class Solution(object):
         """
         l = []
         count = 0
-        while self.fib(count) < k:
+        while self.fib(count) <= k:
             l.append(self.fib(count))
             count +=1
         
