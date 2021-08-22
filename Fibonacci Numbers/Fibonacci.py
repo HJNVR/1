@@ -6,7 +6,7 @@ def fib(n):
 # Q1: Find the Minimum Number of Fibonacci Numbers Whose Sums is K
 
 ## My Attempt : Success but slow
-class Solution(object):
+class MySolution(object):
     '''
     Input: k = 7
     Output: 2 
@@ -49,6 +49,19 @@ class Solution(object):
             if fib_sum == k:
                 break
         return result
-            
-            
+
+## Solution
+class Solution(object):
+        
+    def findMinFibonacciNumbers(self, k):
+        """
+        :type k: int
+        :rtype: int
+        """
+        if k<=1:
+            return k
+        a,b = 1,1
+        while b <= k:
+            a,b = b,a+b
+        return self.findMinFibonacciNumbers(k-a) + 1
             
