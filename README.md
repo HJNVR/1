@@ -14,3 +14,6 @@
 
 ### Q2. Gas Station
 	https://leetcode.com/problems/gas-station/
+
+### Q3. Validate Stack Sequences
+	https://leetcode.com/problems/validate-stack-sequences/

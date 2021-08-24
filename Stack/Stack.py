@@ -78,7 +78,7 @@ class MaxStack:
         return result
             
 #Q2 Gas Station
-class Solution(object):
+class Solution2(object):
     def canCompleteCircuit(self, gas, cost):
         """
         :type gas: List[int]
@@ -95,7 +95,24 @@ class Solution(object):
                 balance = 0
                 position = i+1
         return position
-        
+
+# Q3 Validate Stack Sequences
+class Solution3(object):
+    def validateStackSequences(self, pushed, popped):
+        """
+        :type pushed: List[int]
+        :type popped: List[int]
+        :rtype: bool
+        """
+        j = 0
+        stack = []
+        for x in pushed:
+            stack.append(x)
+            while stack and j < len(popped) and stack[-1] == popped[j]:
+                stack.pop()
+                j += 1
+
+        return j == len(popped)
 
 
 # Your FreqStack object will be instantiated and called as such:
