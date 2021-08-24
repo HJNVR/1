@@ -1,4 +1,4 @@
-#Algorithm-Collections
+#lgorithm-Collections
 ## LeetCode, Books, LintCode
 
 ## 1. Fibonacci Numbers
@@ -11,4 +11,6 @@
 ## 2. Stack
 ### Q1. Max Stack
 	https://www.lintcode.com/problem/859/
- 
+
+### Q2. Gas Station
+	https://leetcode.com/problems/gas-station/

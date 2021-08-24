@@ -25,6 +25,7 @@ class Stack:
         def toString(self):
                 return self.stack
 
+# Q1 Max Stack
 class MaxStack:
     
     def __init__(self):
@@ -75,8 +76,32 @@ class MaxStack:
         result = self.stack[l[-1]]
         self.stack.pop(l[-1])
         return result
+            
+#Q2 Gas Station
+class Solution(object):
+    def canCompleteCircuit(self, gas, cost):
+        """
+        :type gas: List[int]
+        :type cost: List[int]
+        :rtype: int
+        """
+        if len(gas) == 0 or len(cost) == 0 or sum(gas) < sum(cost):
+            return -1
+        position = 0
+        balance = 0 # current tank balance
+        for i in range(len(gas)):
+            balance += gas[i] - cost[i] # update balance
+            if balance < 0: # balance drops to negative, reset the start position
+                balance = 0
+                position = i+1
+        return position
+        
 
 
+# Your FreqStack object will be instantiated and called as such:
+# obj = FreqStack()
+# obj.push(val)
+# param_2 = obj.pop()
 if __name__ == '__main__':
     S = Stack()
     print(S.toString())
