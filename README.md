@@ -17,3 +17,6 @@
 
 ### Q3. Validate Stack Sequences
 	https://leetcode.com/problems/validate-stack-sequences/
+
+### Q4. Dinner Plate Stacks
+	https://leetcode.com/problems/dinner-plate-stacks/
