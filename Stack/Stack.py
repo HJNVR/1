@@ -233,6 +233,20 @@ class DinnerPlatesSolution:
 
         # otherwise, return -1 because we can't pop any plate
         return -1
+
+# Q5 Solution
+class Solution5(object):
+    def __init__(self):
+        self.dic = {1:1, 2:2}
+    
+    def climbStairs(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        if n not in self.dic:
+            self.dic[n] = self.climbStairs(n-1) + self.climbStairs(n-2)
+        return self.dic[n]
 if __name__ == '__main__':
     S = Stack()
     print(S.toString())

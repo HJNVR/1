@@ -20,3 +20,6 @@
 
 ### Q4. Dinner Plate Stacks
 	https://leetcode.com/problems/dinner-plate-stacks/
+
+### Q5. Climbing Stairs
+	https://leetcode.com/problems/climbing-stairs/
