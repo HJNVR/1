@@ -23,3 +23,6 @@
 
 ### Q5. Climbing Stairs
 	https://leetcode.com/problems/climbing-stairs/
+
+### Q6. Min Cost Climbing Stairs
+	https://leetcode.com/problems/min-cost-climbing-stairs/
