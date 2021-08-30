@@ -26,3 +26,6 @@
 
 ### Q6. Min Cost Climbing Stairs
 	https://leetcode.com/problems/min-cost-climbing-stairs/
+
+### Q7. Valid Tic-Tac-Toc State
+	https://leetcode.com/problems/valid-tic-tac-toe-state/

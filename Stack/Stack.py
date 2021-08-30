@@ -247,6 +247,31 @@ class Solution5(object):
         if n not in self.dic:
             self.dic[n] = self.climbStairs(n-1) + self.climbStairs(n-2)
         return self.dic[n]
+
+# Q6 Solution
+class Solution6(object):
+    def minCostClimbingStairs(self, cost):
+        """
+        :type cost: List[int]
+        :rtype: int
+        """
+        for i in range(2, len(cost)):
+            cost[i] += min(cost[i-1], cost[i-2])
+        
+        return min(cost[-1], cost[-2])
+
+# Q7 Solution
+class Solution7(object):
+    def validTicTacToe(self, board):
+        """
+        :type board: List[str]
+        :rtype: bool
+        """
+    
+        b = '|'.join(board)
+        x, o = (any(p*3 in b[s::d] for s in range(9) for d in (1, 3, 4, 5)) for p in 'XO')
+        m = b.count('X') - b.count('O')
+        return m == (not o) if m else not x
 if __name__ == '__main__':
     S = Stack()
     print(S.toString())
