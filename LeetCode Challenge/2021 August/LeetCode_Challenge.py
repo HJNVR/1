@@ -1,5 +1,5 @@
 # Q1
-class Solution(object):
+class Solution1(object):
     def findLUSlength(self, strs):
         def check(s1,s2):
             A = len(s1)
@@ -26,4 +26,33 @@ class Solution(object):
         return maxLen
 
 # Q2
+class Solution2(object):
+    def minPatches(self, nums, n):
+        """
+        :type nums: List[int]
+        :type n: int
+        :rtype: int
+        """
+        ans, nsum = 0, 0
+        nums.append(n+1)
+        for i in nums:
+            num = min(i,n+1)
+            while nsum + 1 < num:
+                print(nsum)
+                nsum += nsum + 1
+                ans += 1
+            nsum += num # add all the sum
+        return ans
 
+# Q3
+class Solution3(object):
+    def maxCount(self, m, n, ops):
+        """
+        :type m: int
+        :type n: int
+        :type ops: List[List[int]]
+        :rtype: int
+        """
+        if not ops:
+            return m*n
+        return min(op[0] for op in ops)*min(op[1] for op in ops)

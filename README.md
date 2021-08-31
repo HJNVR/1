@@ -29,3 +29,5 @@
 
 ### Q7. Valid Tic-Tac-Toc State
 	https://leetcode.com/problems/valid-tic-tac-toe-state/
+
+## 3. BST
