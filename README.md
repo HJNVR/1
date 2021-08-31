@@ -31,3 +31,5 @@
 	https://leetcode.com/problems/valid-tic-tac-toe-state/
 
 ## 3. BST
+### Q1. Range Sum of BST
+	https://leetcode.com/problems/range-sum-of-bst/
