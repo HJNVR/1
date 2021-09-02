@@ -70,7 +70,33 @@ class Solution1(object):
         self.res = 0
         dfs(root)
         return self.res
-        
+
+# Q2
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution2(object):
+    def getMinimumDifference(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        L = []
+        def dfs(node):
+            if node.left: dfs(node.left)
+            L.append(node.val)
+            if node.right: dfs(node.right)
+        dfs(root)
+        #print(L)
+        abs_mins = []
+        for i in range(len(L)-1):
+            abs_mins.append(abs(L[i]-L[i+1]))
+        return min(abs_mins)
+            
+        #return min(b - a for a, b in zip(L, L[1:]))
 if __name__ == '__main__':
     BST = Node(6)
     BST.left = Node(4)

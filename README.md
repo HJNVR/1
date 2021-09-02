@@ -33,3 +33,6 @@
 ## 3. BST
 ### Q1. Range Sum of BST
 	https://leetcode.com/problems/range-sum-of-bst/
+
+### Q2. Minimum Absolute Difference in BST
+	https://leetcode.com/problems/minimum-absolute-difference-in-bst/
