@@ -97,6 +97,63 @@ class Solution2(object):
         return min(abs_mins)
             
         #return min(b - a for a, b in zip(L, L[1:]))
+
+# Q3 
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution3(object):
+    pre = -float('inf')
+    res = float('inf')
+    def getMinimumDifference(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        if root.left:
+            self.getMinimumDifference(root.left)
+        self.res = min(self.res, root.val - self.pre)
+        self.pre = root.val
+        #print(self.res)
+        #print(self.pre)
+        if root.right:
+            self.getMinimumDifference(root.right)
+        return self.res
+
+# Q4 solve by myself
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution4(object):
+    def findTarget(self, root, k):
+        """
+        :type root: TreeNode
+        :type k: int
+        :rtype: bool
+        """
+        l = []
+        def inorder(root):
+            if not root:
+                return
+            inorder(root.left)
+            l.append(root.val)
+            inorder(root.right)
+        inorder(root)
+        #print(l)
+        for i in range(len(l)-1):
+            for j in range(i+1,len(l)):
+                if (l[i]+l[j]) == k:
+                    return True
+        return False
+            
+        
 if __name__ == '__main__':
     BST = Node(6)
     BST.left = Node(4)

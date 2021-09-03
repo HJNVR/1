@@ -36,3 +36,9 @@
 
 ### Q2. Minimum Absolute Difference in BST
 	https://leetcode.com/problems/minimum-absolute-difference-in-bst/
+
+### Q3. Minimum Distance Between BST Nodes
+	https://leetcode.com/problems/minimum-distance-between-bst-nodes/
+
+### Q4. Two Sum IV - Input is a BST
+	https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
