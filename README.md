@@ -45,3 +45,6 @@
 
 ### Q5. Delete Node in BST
 	https://leetcode.com/problems/delete-node-in-a-bst/
+
+### Q6. Convert BST to Greater Tree
+	https://leetcode.com/problems/convert-bst-to-greater-tree/

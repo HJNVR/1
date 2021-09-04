@@ -189,7 +189,22 @@ class Solution5(object):
 		    root.val = mini # replace value
 		    root.right = self.deleteNode(root.right,root.val) # delete the minimum node in right subtree
         return root
-        
+
+# Q6
+class Solution6(object):
+    total = 0
+    def convertBST(self, root):
+        """
+        :type root: TreeNode
+        :rtype: TreeNode
+        """
+        if root:
+            self.convertBST(root.right)
+            self.total += root.val
+            root.val = self.total
+            self.convertBST(root.left)
+        return root
+            
 if __name__ == '__main__':
     BST = Node(6)
     BST.left = Node(4)
