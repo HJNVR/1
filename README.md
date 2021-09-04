@@ -1,4 +1,4 @@
-#lgorithm-Collections
+#algorithm-Collections
 ## LeetCode, Books, LintCode
 
 ## 1. Fibonacci Numbers
@@ -42,3 +42,6 @@
 
 ### Q4. Two Sum IV - Input is a BST
 	https://leetcode.com/problems/two-sum-iv-input-is-a-bst/
+
+### Q5. Delete Node in BST
+	https://leetcode.com/problems/delete-node-in-a-bst/
